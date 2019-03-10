@@ -21,5 +21,20 @@ function showResults(json) {
 }
 
 function createIssue() {
-  
+  const repo = `${user}/js-ajax-fetch-lab`;
+  const url = `${baseURL}/repos/${repo}/issues`;
+  const postData = {
+    title: document.getElementById('title').value,
+    body: document.getElementById('body').value
+  };
+
+  fetch(url, {
+    method: 'POST',
+    body: JSON.stringify(postData),
+    headers: {
+      Authorization: `token ${getToken()}`
+    }
+  })
+    .then(res => res.json())
+    .then(json => getIssues());
 }
