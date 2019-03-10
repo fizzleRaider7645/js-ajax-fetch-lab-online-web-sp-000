@@ -40,8 +40,7 @@ function createIssue() {
 
 function getIssues() {
   const repo = `fizzleRaider7645/js-ajax-fetch-lab`;
-  const url = `${baseURL}/repos/${repo}/issues`;
-  fetch(url, {
+  fetch(`https://api.github.com/repos/${repo}/issues`, {
     headers: {
       Authorization: `token ${getToken()}`
     }
