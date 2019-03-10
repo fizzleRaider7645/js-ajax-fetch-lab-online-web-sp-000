@@ -21,7 +21,7 @@ function showResults(json) {
 }
 
 function createIssue() {
-  const repo = `${user}/js-ajax-fetch-lab`;
+  const repo = `fizzleRaider7645/js-ajax-fetch-lab`;
   const url = `${baseURL}/repos/${repo}/issues`;
   const postData = {
     title: document.getElementById('title').value,
