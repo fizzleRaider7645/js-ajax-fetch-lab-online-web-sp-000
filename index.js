@@ -38,3 +38,7 @@ function createIssue() {
   //   .then(res => res.json())
   //   .then(json => getIssues());
 }
+
+function getIssues() {
+  
+}
