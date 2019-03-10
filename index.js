@@ -28,7 +28,7 @@ function createIssue() {
     body: document.getElementById('body').value
   };
 
-  fetch(url, {
+  fetch(`https://api.github.com/repos/${repo}/issues`, {
     method: 'POST',
     body: JSON.stringify(postData),
     headers: {
